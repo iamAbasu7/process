@@ -4,8 +4,10 @@ const { cloneRepo } = require("./cloneZombienet");
 
 module.exports = {
   directoryIsExist: async function () {
-    const { stdout, stderr } = await exec('cd .. && rm -rf parity-zeeve-zombienet');
     console.log("checking for file parity-zeeve-zombienet ...");
+    
+    const { stdout, stderr } = await exec('cd && rm -rf parity-zeeve-zombienet');
+    
     // console.log('stdout:', stdout);
     // console.error('stderr:', stderr);
     cloneRepo();

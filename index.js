@@ -1,8 +1,9 @@
 const { createBinary } = require("./buildBinary");
 const { directoryIsExist } = require("./checkDirectory");
+const {podmanCheck} = require("./checkPodman");
 const { cloneRepo } = require("./cloneZombienet");
 
-directoryIsExist();
+podmanCheck();
 
 
 
